@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation</title>
+
+  <!-- Google Tag Manager -->
+  <script async="" src="http://www.google-analytics.com/analytics.js"></script>
+  <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-THP5XBK"></script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+          'gtm.start':
+              new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-THP5XBK');</script>
+  <!-- End Google Tag Manager -->
+
+  <link href="./static/css/fontawesome.all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+  <link href="./static/css/bulma.min.css" rel="stylesheet">
+  <link href="./static/css/index.css" rel="stylesheet">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script>
+      (function (i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function () {
+              (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-72422365-1', 'auto');
+      ga('send', 'pageview');
+  </script>
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero publication-header">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <div class="is-size-6 publication-venue">CVPR 2020</div>
+
+          <h1 class="title is-1 publication-title">LatentFusion: End-to-End Differentiable Reconstruction and Rendering
+                                                   for Unseen Object Pose Estimation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block author-block-"><a href="https://keunhong.com">Keunhong Park</a></span>,
+            <span class="author-block author-block-"><a
+                href="https://cs.gmu.edu/~amousavi/">Arsalan Mousavian</a></span>,
+            <span class="author-block author-block-"><a href="https://yuxng.github.io/">Yu Xiang</a></span>,
+            <span class="author-block author-block-"><a
+                href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a></span>
+          </div>
+
+          <div class="publication-links">
+          <span class="link-block link-block-">
+            <a class="external-link button is-small is-rounded is-link" href="https://arxiv.org/pdf/1912.00416.pdf">
+              <span class="icon"> <i class="fas fa-file-pdf"></i> </span>
+              <span>PDF</span>
+            </a>
+          </span>
+
+            <span class="link-block link-block-">
+            <a class="external-link button is-small is-rounded is-link" href="https://arxiv.org/abs/1912.00416">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv</span>
+            </a>
+          </span>
+
+            <span class="link-block link-block-">
+            <a class="external-link button is-small is-rounded is-link" href="https://github.com/NVlabs/latentfusion">
+              <span class="icon"><i class="fas fab fa-github"></i></span>
+              <span>Code</span>
+            </a>
+            </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="content">
+
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <h2 class="is-2">Video</h2>
+          <div class="publication-video">
+            <iframe allow="autoplay; encrypted-media"
+                    allowfullscreen frameborder="0"
+                    src="https://www.youtube.com/embed/tlzcq1KYXd8?rel=0&amp;showinfo=0"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <h2>Abstract</h2>
+          <p>Current 6D object pose estimation methods usually require a 3D model for each object. These methods also
+             require additional training in order to incorporate new objects. As a result, they are
+             difficult to scale to a large number of objects and cannot be directly applied to unseen objects.</p>
+          <p>We propose a novel framework for 6D pose estimation of unseen objects. We present a network that
+             reconstructs a
+             latent 3D representation of an object using a small number of reference views
+             at inference time. Our network is able to render the latent 3D representation from arbitrary views. Using
+             this
+             neural renderer, we directly optimize for pose given an input image. By training
+             our network with a large number of 3D shapes for reconstruction and rendering, our network generalizes well
+             to
+             unseen objects. We present a new dataset for unseen object pose
+             estimation--MOPED. We evaluate the performance of our method for unseen object pose estimation on MOPED as
+             well
+             as the ModelNet and LINEMOD datasets. Our method performs competitively to
+             supervised methods that are trained on those objects.</p>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <div class="publication-body">
+            <h2 class="is-2">Citing LatentFusion</h2>
+            <p>If you find the LatentFusion code or data useful, please consider citing:</p>
+            <pre><code class="lang-bibtex">@inproceedings{park2019latentfusion,
+  title={LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation},
+  author={Park, Keunhong and Mousavian, Arsalan and Xiang, Yu and Fox, Dieter},
+  booktitle={CVPR},
+  year={2020}
+}
+</code></pre>
+            <h2 class="is-2">Code</h2>
+            <p>You can find our code on <a href="https://github.com/NVlabs/latentfusion">Github</a></p>
+            <h2 class="is-2">MOPED Dataset</h2>
+            <div class="columns">
+              <div class="column is-half">
+                <img alt="MOPED dataset" src="./static/images/background.jpg"/>
+              </div>
+              <div class="column">
+                <p>The dataset is available for download <a
+                    href="https://homes.cs.washington.edu/~kpar/latentfusion/moped.tgz">here</a>!
+                </p>
+              </div>
+            </div>
+            <h3 class="is-3">Dataset License</h3>
+            <blockquote><p>Copyright 2020 NVIDIA</p>
+              <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+                 associated documentation files (the "Software"), to deal in the &gt; Software without
+                 restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute,
+                 sublicense, and/or sell copies of the Software, and to permit persons to whom the
+                 Software is furnished to do so, subject to the following conditions:</p>
+              <p>The above copyright notice and this permission notice shall be included in all copies or substantial
+                 portions of the Software.</p>
+              <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+                 LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+                 NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+                 OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            </blockquote>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a href="mailto:46Aik2sugTKFHX92@keunhong.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a class="external-link" href="https://github.com/keunhong">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="external-link"
+         href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F6ma662dZahhSxXWh4usLcc9Y_4mLjlVZIydlL0F9lJgXde_tlP9Cws3dnoyrqppSz81tUGCG-RqawbVWHuOyy9PdPm3iZuxDLbCuYMem8YLzTQ1VA&user=HVZb-5oAAAAJ">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </div>
+</footer>
+
+
+</body>
+</html>
