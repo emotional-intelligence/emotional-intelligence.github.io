@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>A psychometric assessment on Emotional Intelligence of Large Language
+      Models</title>
 
-  <!-- Google Tag Manager -->
-  <script async="" src="http://www.google-analytics.com/analytics.js"></script>
-  <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-THP5XBK"></script>
-  <script>(function (w, d, s, l, i) {
+    <!-- Google Tag Manager -->
+    <script async="" src="http://www.google-analytics.com/analytics.js"></script>
+    <script async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-THP5XBK"></script>
+    <script>(function (w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
           'gtm.start':
@@ -22,17 +24,19 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
   })(window, document, 'script', 'dataLayer', 'GTM-THP5XBK');</script>
-  <!-- End Google Tag Manager -->
+    <!-- End Google Tag Manager -->
 
-  <link href="./static/css/fontawesome.all.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
-  <link href="./static/css/bulma.min.css" rel="stylesheet">
-  <link href="./static/css/index.css" rel="stylesheet">
+    <link href="./static/css/fontawesome.all.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+      rel="stylesheet">
+    <link href="./static/css/bulma.min.css" rel="stylesheet">
+    <link href="./static/css/index.css" rel="stylesheet">
 
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/index.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/index.js"></script>
 
-  <script>
+    <script>
       (function (i, s, o, g, r, a, m) {
           i['GoogleAnalyticsObject'] = r;
           i[r] = i[r] || function () {
@@ -48,197 +52,471 @@
       ga('create', 'UA-72422365-1', 'auto');
       ga('send', 'pageview');
   </script>
-</head>
-<body>
+  </head>
+  <body>
 
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu"
+          aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
       </div>
-    </div>
-
-  </div>
-</nav>
-
-
-<section class="hero publication-header">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-two-thirds">
-          <div class="is-size-6 publication-venue">ABC Lab</div>
-
-          <h1 class="title is-1 publication-title">A psychometric assessment on Emotional Intelligence of Large Language Models</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block author-block-"><a> Xuena Wang</a></span>
-            <span class="author-block author-block-"><a> Xueting Li</a></span>
-            <span class="author-block author-block-"><a> Zi Ying</a></span>
-            <span class="author-block author-block-"><a> Yue Wu</a></span>
-            <span class="author-block author-block-"><a> Liu Jia</a></span>
-          </div>
-
-          <div class="publication-links">
-          <span class="link-block link-block-">
-            <a class="external-link button is-small is-rounded is-link" href="xxx">
-              <span class="icon"> <i class="fas fa-file-pdf"></i> </span>
-              <span>PDF</span>
+      <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content:
+          center;">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More Research
             </a>
-          </span>
-
-            <span class="link-block link-block-">
-            <a class="external-link button is-small is-rounded is-link" href="xxx">
-              <span class="icon"><i class="ai ai-arxiv"></i></span>
-              <span>arXiv</span>
-            </a>
-          </span>
-
-            <span class="link-block link-block-">
-            <a class="external-link button is-small is-rounded is-link" href="xxx">
-              <span class="icon"><i class="fas fab fa-github"></i></span>
-              <span>Code</span>
-            </a>
-            </span>
-
+            <div class="navbar-dropdown">
+            </div>
           </div>
         </div>
+
       </div>
-    </div>
-  </div>
-</section>
+    </nav>
 
-<section class="section">
-  <div class="container">
-    <div class="content">
 
-      <div class="columns is-centered">
-        <div class="column is-two-thirds">
-          <h2 class="is-2">Video</h2>
-          <div class="publication-video">
-            <iframe allow="autoplay; encrypted-media"
-                    allowfullscreen frameborder="0"
-                    src="https://www.youtube.com/embed/tlzcq1KYXd8?rel=0&amp;showinfo=0"></iframe>
-          </div>
-        </div>
-      </div>
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-two-thirds">
+              <div class="is-size-6 publication-venue">ABC lab</div>
 
-      <div class="columns is-centered">
-        <div class="column is-half">
-          <h2>Abstract</h2>
-          <p>Current 6D object pose estimation methods usually require a 3D model for each object. These methods also
-             require additional training in order to incorporate new objects. As a result, they are
-             difficult to scale to a large number of objects and cannot be directly applied to unseen objects.</p>
-          <p>We propose a novel framework for 6D pose estimation of unseen objects. We present a network that
-             reconstructs a
-             latent 3D representation of an object using a small number of reference views
-             at inference time. Our network is able to render the latent 3D representation from arbitrary views. Using
-             this
-             neural renderer, we directly optimize for pose given an input image. By training
-             our network with a large number of 3D shapes for reconstruction and rendering, our network generalizes well
-             to
-             unseen objects. We present a new dataset for unseen object pose
-             estimation--MOPED. We evaluate the performance of our method for unseen object pose estimation on MOPED as
-             well
-             as the ModelNet and LINEMOD datasets. Our method performs competitively to
-             supervised methods that are trained on those objects.</p>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-two-thirds">
-          <div class="publication-body">
-            <h2 class="is-2">Citing LatentFusion</h2>
-            <p>If you find the LatentFusion code or data useful, please consider citing:</p>
-            <pre><code class="lang-bibtex">@inproceedings{park2019latentfusion,
-  title={LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation},
-  author={Park, Keunhong and Mousavian, Arsalan and Xiang, Yu and Fox, Dieter},
-  booktitle={CVPR},
-  year={2020}
-}
-</code></pre>
-            <h2 class="is-2">Code</h2>
-            <p>You can find our code on <a href="https://github.com/NVlabs/latentfusion">Github</a></p>
-            <h2 class="is-2">MOPED Dataset</h2>
-            <div class="columns">
-              <div class="column is-half">
-                <img alt="MOPED dataset" src="./static/images/background.jpg"/>
+              <h1 class="title is-1 publication-title">A psychometric assessment
+                on Emotional Intelligence of Large Language Models</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="is-3"><a> Xuena Wang</a></span>
+                <span class="author-block author-block-"><a> Xueting Li</a></span>
+                <span class="author-block author-block-"><a> Zi Ying</a></span>
+                <span class="author-block author-block-"><a> Yue Wu</a></span>
+                <span class="author-block author-block-"><a> Liu Jia</a></span>
               </div>
-              <div class="column">
-                <p>The dataset is available for download <a
-                    href="https://homes.cs.washington.edu/~kpar/latentfusion/moped.tgz">here</a>!
+
+              <div class="publication-links">
+                <span class="link-block link-block-">
+                  <a class="external-link button is-small is-rounded is-link"
+                    href="xxx">
+                    <span class="icon"> <i class="fas fa-file-pdf"></i> </span>
+                    <span>PDF</span>
+                  </a>
+                </span>
+
+                <span class="link-block link-block-">
+                  <a class="external-link button is-small is-rounded is-link"
+                    href="xxx">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <span class="link-block link-block-">
+                  <a class="external-link button is-small is-rounded is-link"
+                    href="xxx">
+                    <span class="icon"><i class="fas fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="content">
+          <div class="columns is-centered">
+            <div class="column is-half">
+              <h2>Abstract</h2>
+              <p>
+                Large Language Models (LLMs) have demonstrated remarkable
+                abilities across a multitude of disciplines. However, their
+                proficiency in Emotion Understanding (EU), a crucial aspect of
+                Emotional Intelligence (EI), remains understudied. EI, involving
+                the recognition, interpretation, and understanding of emotions,
+                plays a pivotal role in effective communication, empathy, and
+                social interactions. This is of considerable significance given
+                that the role of AI is expanding in areas where understanding
+                human emotion is critical.
+              </p>
+              <p>
+                This study aims to measure the EI capabilities of LLMs,
+                particularly their competence in EU. To this end, we developed a
+                novel standardized test, known as the Situational Evaluation of
+                Complex Emotional Understanding (SECEU), which was structured to
+                emulate real-life scenarios requiring complex emotional
+                understanding and used data from over 500 young adults to
+                establish a norm. A wide variety of prominent LLMs were
+                evaluated using the SECEU, with their scores standardized
+                against the established norm to allow for a direct comparison
+                with human responses. Our primary findings indicated that most
+                of the LLMs tested achieved above-average EQ scores. However,
+                individual differences across models were significant. GPT-4
+                stood out, scoring the highest EQ while also exhibiting
+                human-like response patterns, demonstrating a balanced mechanism
+                for high EU proficiency. This research constitutes a
+                comprehensive psychometric examination of LLMs' EI, and
+                illuminates the potential influence of various factors like
+                model size, training methods, and architecture on models' EU
+                performance. Given the ever-growing role of LLMs in
+                human-computer interaction, our study underscores the critical
+                need for emotional intelligence in these systems. The insights
+                gained here will inform future development of LLMs, facilitating
+                the creation of models that embody high levels of both
+                intellectual and emotional intelligence.
+              </p>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-half">
+              <!-- <h2>Results</h2> -->
+
+              <p style="text-align:center;">
+                <image src="./static/images/eq.png" width="100%">
+                </p>
+                <p>
+                  The family tree of LLMs. Each node in the tree represents an
+                  LLM, whose vertical position along the y-axis indicates the
+                  launch time. The size of each node corresponds to the
+                  parameter size of the LLM. Note that the size of GPT-4 and xx
+                  (if any) was estimated based on publicly available
+                  information. Color donates the EQ scores, with red color for
+                  higher scores and blue color for lower scores. Note that white
+                  color shows that models failed to conduct the SECEU. The color
+                  of the branches distinguishes between open-source (light gray)
+                  and closed-source (dark gray) models.
                 </p>
               </div>
             </div>
-            <h3 class="is-3">Dataset License</h3>
-            <blockquote><p>Copyright 2020 NVIDIA</p>
-              <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
-                 associated documentation files (the "Software"), to deal in the &gt; Software without
-                 restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute,
-                 sublicense, and/or sell copies of the Software, and to permit persons to whom the
-                 Software is furnished to do so, subject to the following conditions:</p>
-              <p>The above copyright notice and this permission notice shall be included in all copies or substantial
-                 portions of the Software.</p>
-              <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
-                 LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-                 NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-                 OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-            </blockquote>
 
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <table class="table is-bordered is-striped is-narrow
+                  is-hoverable is-fullwidth">
+                  <thead>
+                    <tr>
+                      <th>Based</th>
+                      <th>Models</th>
+                      <th>SECEU score</th>
+                      <th>EQ%</th>
+                      <!-- <th>%</th> -->
+                      <th>r</th>
+                      <th>Pattern Similarity %</th>
+                      <!-- <th>%</th> -->
+                      <th>Size</th>
+                      <th>Time</th>
+                      <th>SFT</th>
+                      <th>RLHF</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="12" style="text-align:center;"><strong>OpenAI
+                          GPT series and sub-models</strong></td>
+                    </tr>
+                    <tr>
+                      <td>DaVinci #</td>
+                      <td>3.5</td>
+                      <td>87</td>
+                      <td>18%</td>
+                      <td>0.41**</td>
+                      <td>91%</td>
+                      <td>175B</td>
+                      <td>2020/05</td>
+                      <td>×</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td>Curie #</td>
+                      <td>2.7</td>
+                      <td>102</td>
+                      <td>50%</td>
+                      <td>0.11</td>
+                      <td>29%</td>
+                      <td>13B</td>
+                      <td>Unknown</td>
+                      <td>×</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td>Babbage #</td>
+                      <td>2.78</td>
+                      <td>100</td>
+                      <td>44%</td>
+                      <td>-0.12</td>
+                      <td>4%</td>
+                      <td>3B</td>
+                      <td>Unknown</td>
+                      <td>×</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td>text-davinci-001 #</td>
+                      <td>2.4</td>
+                      <td>107</td>
+                      <td>64%</td>
+                      <td>0.2</td>
+                      <td>47%</td>
+                      <td>&lt;175B</td>
+                      <td>Unknown</td>
+                      <td>×</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td>text-davinci-002 #</td>
+                      <td>3.3</td>
+                      <td>91</td>
+                      <td>23%</td>
+                      <td>-0.04</td>
+                      <td>8%</td>
+                      <td>&lt;175B</td>
+                      <td>Unknown</td>
+                      <td>√</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td>text-davinci-003 ##</td>
+                      <td>2.01</td>
+                      <td>114</td>
+                      <td>83%</td>
+                      <td>0.31*</td>
+                      <td>73%</td>
+                      <td>175B</td>
+                      <td>2022/11/28</td>
+                      <td>√</td>
+                      <td>√</td>
+                    </tr>
+                    <tr>
+                      <td>GPT-3.5-turbo</td>
+                      <td>2.63</td>
+                      <td>103</td>
+                      <td>52%</td>
+                      <td>0.04</td>
+                      <td>17%</td>
+                      <td>175B</td>
+                      <td>2022/11/30</td>
+                      <td>√</td>
+                      <td>√</td>
+                    </tr>
+                    <tr>
+                      <td>GPT-4</td>
+                      <td>1.89</td>
+                      <td>117</td>
+                      <td>89%</td>
+                      <td>0.28</td>
+                      <td>67%</td>
+                      <td>Unknown</td>
+                      <td>2023/03/14</td>
+                      <td>√</td>
+                      <td>√</td>
+                    </tr>
+                    <tr>
+                      <td colspan="12" style="text-align:center;"><strong>LLaMA</strong></td>
+                    </tr>
+                    <tr>
+                      <td>LLaMA</td>
+                      <td>------FAILED------</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>13B</td>
+                      <td>2023/02/24</td>
+                      <td>×</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td>Alpaca</td>
+                      <td>2.56</td>
+                      <td>104</td>
+                      <td>56%</td>
+                      <td>0.03</td>
+                      <td>15%</td>
+                      <td>13B</td>
+                      <td>2023/03/09</td>
+                      <td>√</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td>Vicuna</td>
+                      <td>2.5</td>
+                      <td>105</td>
+                      <td>59%</td>
+                      <td>-0.02</td>
+                      <td>10%</td>
+                      <td>13B</td>
+                      <td>2023/03/30</td>
+                      <td>√</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td>Koala</td>
+                      <td>3.72</td>
+                      <td>83</td>
+                      <td>13%</td>
+                      <td>0.43**</td>
+                      <td>93%</td>
+                      <td>13B</td>
+                      <td>2023/04/03</td>
+                      <td>√</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td colspan="12" style="text-align:center;"><strong>Flan-t5</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Fastchat</td>
+                      <td>------FAILED------</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>3B</td>
+                      <td>2023/04/30</td>
+                      <td>√</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td colspan="12" style="text-align:center;"><strong>Pythia</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Dolly</td>
+                      <td>2.89</td>
+                      <td>98</td>
+                      <td>38%</td>
+                      <td>0.26</td>
+                      <td>62%</td>
+                      <td>13B</td>
+                      <td>2023/04/12</td>
+                      <td>√</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td>Oasst</td>
+                      <td>2.41</td>
+                      <td>107</td>
+                      <td>64%</td>
+                      <td>0.24</td>
+                      <td>59%</td>
+                      <td>13B</td>
+                      <td>2023/04/15</td>
+                      <td>√</td>
+                      <td>√</td>
+                    </tr>
+                    <tr>
+                      <td colspan="12" style="text-align:center;"><strong>GLM</strong></td>
+                    </tr>
+                    <tr>
+                      <td>ChatGLM</td>
+                      <td>3.12</td>
+                      <td>94</td>
+                      <td>28%</td>
+                      <td>0.09</td>
+                      <td>24%</td>
+                      <td>6B</td>
+                      <td>2023/03/14</td>
+                      <td>√</td>
+                      <td>√</td>
+                    </tr>
+                    <tr>
+                      <td colspan="12" style="text-align:center;"><strong>RWKV</strong></td>
+                    </tr>
+                    <tr>
+                      <td>RWKV-v4</td>
+                      <td>------FAILED------</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>13B</td>
+                      <td>2023/02/15</td>
+                      <td>√</td>
+                      <td>×</td>
+                    </tr>
+                    <tr>
+                      <td colspan="12" style="text-align:center;"><strong>Claude</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Claude</td>
+                      <td>2.46</td>
+                      <td>106</td>
+                      <td>61%</td>
+                      <td>0.11</td>
+                      <td>28%</td>
+                      <td>Unknown</td>
+                      <td>2023/03/14</td>
+                      <td>√</td>
+                      <td>√</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+
+            <div class="columns is-centered">
+              <div class="column is-two-thirds">
+                <div class="publication-body">
+                  <h2 class="is-2">Citing Emotional Intelligence</h2>
+                  <p>If you find the emotional intelligence or data useful,
+                    please
+                    consider citing:</p>
+                  <pre><code class="lang-bibtex">@inproceedings{wang2023psychometric,}
+                </code></pre>
+                  <h2 class="is-2">Code</h2>
+                  <p>You can find our code on <a
+                      href="https://github.com/emotional-intelligence">Github</a></p>
+                  <h2 class="is-2">The Situational Evaluation of Complex
+                    Emotional
+                    Understanding (SECEU) Dataset</h2>
+                  <div class="columns">
+                    <!-- <div class="column is-half">
+                <img alt="MOPED dataset" src="./static/images/background.jpg"/>
+              </div> -->
+                    <!-- <div class="column">
+                <p>The dataset is available for download <a
+                    href="https://homes.cs.washington.edu/~kpar/latentfusion/moped.tgz">here</a>!
+                </p>
+              </div> -->
+                  </div>
+                  <h3 class="is-3">Dataset License</h3>
+                  <blockquote><p>Copyright 2023 Liulab </p>
+                    <p>The emotional intelligence dataset is licensed under a
+                      Creative Commons Attribution 4.0 International License.
+                    </p>
+                  </blockquote>
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a href="mailto:46Aik2sugTKFHX92@keunhong.com">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a class="external-link" href="https://github.com/keunhong">
-        <i class="fab fa-github"></i>
-      </a>
-      <a class="external-link"
-         href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F6ma662dZahhSxXWh4usLcc9Y_4mLjlVZIydlL0F9lJgXde_tlP9Cws3dnoyrqppSz81tUGCG-RqawbVWHuOyy9PdPm3iZuxDLbCuYMem8YLzTQ1VA&user=HVZb-5oAAAAJ">
-        <i class="ai ai-google-scholar"></i>
-      </a>
-    </div>
-</footer>
+      <footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered">
+            <a href="mailto:46Aik2sugTKFHX92@keunhong.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a class="external-link" href="https://github.com/keunhong">
+              <i class="fab fa-github"></i>
+            </a>
+            <a class="external-link"
+              href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F6ma662dZahhSxXWh4usLcc9Y_4mLjlVZIydlL0F9lJgXde_tlP9Cws3dnoyrqppSz81tUGCG-RqawbVWHuOyy9PdPm3iZuxDLbCuYMem8YLzTQ1VA&user=HVZb-5oAAAAJ">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </div>
+        </footer>
 
 
-</body>
-</html>
+      </body>
+    </html>
