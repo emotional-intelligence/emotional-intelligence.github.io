@@ -133,7 +133,7 @@
       <div class="container">
         <div class="content">
           <div class="columns is-centered">
-            <div class="column is-half">
+            <div class="column is-two-thirds">
               <h2>Abstract</h2>
               <p>
                 Large Language Models (LLMs) have demonstrated remarkable
@@ -174,15 +174,80 @@
               </p>
             </div>
           </div>
+
           <div class="columns is-centered">
-            <div class="column is-half">
-              <!-- <h2>Results</h2> -->
+            <div class="column is-two-thirds">
+              <div class="publication-body">
+
+                <h2 class="is-2">The SECEU Dataset</h2>
+
+         
+                <p>
+
+                  The Situational Evaluation of Complex Emotional Understanding
+                  (SECEU) is a novel standardized test developed to assess the
+                  emotional intelligence (EI) of language learning models
+                  (LLMs), focusing on their proficiency in understanding complex
+                  emotions. Established using data from over 500 young adults,
+                  the SECEU features 40 items, each presenting a unique scenario
+                  designed to evoke a range of emotions. Participants rate the
+                  intensity of four probable emotions per scenario. The test's
+                  reliability and validity were demonstrated through
+                  administration to undergraduate and postgraduate students,
+                  measuring the Euclidean distance between the participant's
+                  individual score and the group's standard score for each item. Data could be found in the link below.
+                </p>
+                <div class="row">
+
+                  <a href="https://emotional-intelligence.github.io/SECEU/SECEU_40items_English.docx">SECEU_English </a> |
+                  <a href="https://emotional-intelligence.github.io/SECEU/SECEU_40items_Chinese.docx">SECEU_Chinese </a> |
+                  <a href="https://emotional-intelligence.github.io/SECEU/SECEU_norm.docx">SECEU_Norm </a> 
+                  <!-- <a href="https://code-as-policies.github.io/prompts/parse_position.txt">Parse Positions</a> | -->
+                  <!-- <a href="https://code-as-policies.github.io/prompts/parse_question.txt">Parse Questions</a> | -->
+                  <!-- <a href="https://code-as-policies.github.io/prompts/fgen.txt">Function Generation</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="columns is-centered">
+            <div class="column is-two-thirds">
+              <div class="publication-body">
+
+                <h2 class="is-2">Prompts</h2>
+
+         
+                <p>
+                  A detailed explanation on the prompts used in the SECEU test.
+                
+                </p>
+                <div class="row">
+
+                  <a href="https://emotional-intelligence.github.io/prompts/Prompts.docx">Prompts </a> 
+                  <!-- <a href="https://code-as-policies.github.io/prompts/parse_position.txt">Parse Positions</a> | -->
+                  <!-- <a href="https://code-as-policies.github.io/prompts/parse_question.txt">Parse Questions</a> | -->
+                  <!-- <a href="https://code-as-policies.github.io/prompts/fgen.txt">Function Generation</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="columns is-centered">
+            <div class="column is-two-thirds">
+              <h2>Results</h2>
 
               <p style="text-align:center;">
                 <image src="./static/images/EQ.jpg" width="100%">
                 </p>
                 <p>
-                  The family tree of LLMs. Each node in the tree represents an
+                  The family tree of LLMs and their corresponding EQ. The
+                  SECEU's scores of the models were converted into standard
+                  Emotional Quotient (EQ) scores, following a normal
+                  distribution where an average score of 100 represents an
+                  individual's EU ability relative to the population average.
+                  Each node in the tree represents an
                   LLM, whose vertical position along the y-axis indicates the
                   launch time. The size of each node corresponds to the
                   parameter size of the LLM. Note that the size of GPT-4 and xx
@@ -197,21 +262,21 @@
             </div>
 
             <div class="columns is-centered">
-              <div class="column is-half">
+              <div class="column is-two-thirds">
                 <table class="table is-bordered is-striped is-narrow
                   is-hoverable is-fullwidth">
                   <thead>
                     <tr>
-                      <th>Based</th>
-                      <th>Models</th>
-                      <th>SECEU score</th>
-                      <th>EQ%</th>
+                      <th>Based Models</th>
+                      <th>SECEU Score</th>
+                      <th>EQ </th>
+                      <th>EQ in percentage</th>
                       <!-- <th>%</th> -->
                       <th>r</th>
-                      <th>Pattern Similarity %</th>
+                      <th>Pattern Similarity%</th>
                       <!-- <th>%</th> -->
                       <th>Size</th>
-                      <th>Time</th>
+                      <th>Release Date</th>
                       <th>SFT</th>
                       <th>RLHF</th>
                     </tr>
@@ -457,104 +522,69 @@
                     </tr>
                   </tbody>
                 </table>
+                <p>
+                  LLMs’ EQ, representational patterns, and properties
+                </p>
               </div>
             </div>
-            <div class="columns is-centered">
-              <div class="column is-two-thirds">
-                <div class="publication-body">
-                  <h2 class="is-2">Prompts</h2>
-                  <div class="row">
-                    <p>
-                      Prompts (for all language models):
-                      <br>
-                      <a
-                        href="https://emotional-intelligence.github.io/emotional-intelligence/prompts/tabletop_ui.txt">prompts
-                        for GPT-series</a> |
-                      <!-- <a href="https://code-as-policies.github.io/prompts/parse_obj_name.txt">Parse Object Names</a> | -->
-                      <!-- <a href="https://code-as-policies.github.io/prompts/parse_position.txt">Parse Positions</a> | -->
-                      <!-- <a href="https://code-as-policies.github.io/prompts/parse_question.txt">Parse Questions</a> | -->
-                      <!-- <a href="https://code-as-policies.github.io/prompts/fgen.txt">Function Generation</a> -->
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
+
             <div class="columns is-centered">
               <div class="column is-two-thirds">
 
 
-                <div class="publication-body">
-                  
-                  <h2 class="is-2">The Situational Evaluation of Complex
-                    Emotional
-                    Understanding (SECEU) Dataset</h2>
+              
+                <h2 class="is-2">Citing Emotional Intelligence</h2>
 
-                    <div class="row">
-                     
-                        <a
-                          href="https://emotional-intelligence.github.io/emotional-intelligence/prompts/seceu_data.pdf">SECEU
-                          data</a> |
-                        <!-- <a href="https://code-as-policies.github.io/prompts/parse_obj_name.txt">Parse Object Names</a> | -->
-                        <!-- <a href="https://code-as-policies.github.io/prompts/parse_position.txt">Parse Positions</a> | -->
-                        <!-- <a href="https://code-as-policies.github.io/prompts/parse_question.txt">Parse Questions</a> | -->
-                        <!-- <a href="https://code-as-policies.github.io/prompts/fgen.txt">Function Generation</a> -->
-                    </div>
-                  <h2 class="is-2">Citing Emotional Intelligence</h2>
-
-                  <p>If you find the emotional intelligence or data useful,
-                    please
-                    consider citing:</p>
-                  <pre><code class="lang-bibtex">@inproceedings{wang2023psychometric,}
+                <p>If you find the emotional intelligence or data useful,
+                  please
+                  consider citing:</p>
+                <pre><code class="lang-bibtex">@inproceedings{wang2023psychometric,}
                 </code></pre>
-                  <h2 class="is-2">Code</h2>
-                  <p>You can find our code on <a
-                      href="https://github.com/emotional-intelligence">Github</a></p>
-                 
-
-             
-                  <div class="columns">
-                    <!-- <div class="column is-half">
+                <h2 class="is-2">Code</h2>
+                <p>You can find our code on <a
+                    href="https://github.com/emotional-intelligence/emotional-intelligence.github.io">Github</a></p>
+                <div class="columns">
+                  <!-- <div class="column is-half">
                 <img alt="MOPED dataset" src="./static/images/background.jpg"/>
               </div> -->
-                    <!-- <div class="column">
+                  <!-- <div class="column">
                 <p>The dataset is available for download <a
                     href="https://homes.cs.washington.edu/~kpar/latentfusion/moped.tgz">here</a>!
                 </p>
               </div> -->
-                  </div>
-                  <h3 class="is-3">Dataset License</h3>
-                  <blockquote><p>Copyright 2023 Liulab </p>
-                    <p>The emotional intelligence dataset is licensed 
-                      under arXiv.org perpetual, non-exclusive license.
-                    </p>
-                  </blockquote>
-
                 </div>
+                <h3 class="is-3">Dataset License</h3>
+                <blockquote><p>Copyright 2023 Liulab </p>
+                  <p>The emotional intelligence dataset is licensed
+                    under arXiv.org perpetual, non-exclusive license.
+                  </p>
+                </blockquote>
+
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
 
-      <footer class="footer">
-        <div class="container">
-          <div class="content has-text-centered">
-            <a href="mailto:yue-wu22@mails.tsinghua.edu.cn">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a class="external-link"
-              href="https://github.com/emotional-intelligence/emotional-intelligence">
-              <i class="fab fa-github"></i>
-            </a>
-            <!-- <a class="external-link"
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <a href="mailto:yue-wu22@mails.tsinghua.edu.cn">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a class="external-link"
+            href="https://github.com/emotional-intelligence/emotional-intelligence.github.io">
+            <i class="fab fa-github"></i>
+          </a>
+          <!-- <a class="external-link"
               href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F6ma662dZahhSxXWh4usLcc9Y_4mLjlVZIydlL0F9lJgXde_tlP9Cws3dnoyrqppSz81tUGCG-RqawbVWHuOyy9PdPm3iZuxDLbCuYMem8YLzTQ1VA&user=HVZb-5oAAAAJ">
               <i class="ai ai-google-scholar"></i>
             </a> -->
-          </div>
-        </footer>
+        </div>
+      </footer>
 
 
-      </body>
-    </html>
+    </body>
+  </html>
